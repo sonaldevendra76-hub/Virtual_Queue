@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Queue</title>
+  <link rel="stylesheet" href="Register_form.css">
+  <script src="Register_form.js"></script>
+</head>
+<body>
+    <div class="Back">
+    <a href="index.html">Go Back</a>
+  </div>
+  <h1>VIRTUAL QUEUE</h1>
+  <div class="container">
+    <button class="btn" onclick="showForm('doctorForm')">
+      <div class="circle"></div>
+      <div class="label">Receptionist</div>
+    </button>
+
+    <button class="btn" onclick="showForm('patientForm')">
+      <div class="circle"></div>
+      <div class="label">Patient</div>
+    </button>
+  </div>
+
+  <!-- <div class="form-container" id="receptionistForm">
+    <h2>Receptionist Form</h2>
+    <form action="connect.php" method="post">
+      <label for="drName">Doctor's Name</label>
+      <input type="text" id="drName" name="DrName" required>
+
+      <label for="qualification">Doctor's Qualification</label>
+      <input type="text" id="qualification" name="qualification" required>
+
+      <label for="address">Clinic Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="mobile">Receptionist Mobile No</label>
+      <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile no" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div> -->
+  <div class="form-container" id="doctorForm">
+  <h2>Doctor Registration Form</h2>
+  <form action="doctor_register.php" method="post">
+    <label for="drName">Doctor's Name</label>
+    <input type="text" id="drName" name="name" required>
+    <label for="qualification">Doctor's Qualification / Specialization</label>
+    <input type="text" id="qualification" name="specialization" required>
+    <label for="address">Clinic Address</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+    <label for="mobile">Mobile No</label>
+    <input type="tel" id="mobile" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile no" required>
+    <label for="email">Email (for Login)</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <label for="password">Password (for Login)</label>
+    <input type="password" id="password" name="password" placeholder="Enter a password" required>
+    <label for="available_from">Available From</label>
+<div class="time-input">
+  <input type="number" id="available_from_hour" name="available_from_hour" min="1" max="12" required placeholder="HH">:
+  <input type="number" id="available_from_minute" name="available_from_minute" min="0" max="59" required placeholder="MM">
+  <select id="available_from_ampm" name="available_from_ampm" required>
+    <option value="AM">AM</option>
+    <option value="PM">PM</option>
+  </select>
+</div>
+
+<label for="available_to">Available To</label>
+<div class="time-input">
+  <input type="number" id="available_to_hour" name="available_to_hour" min="1" max="12" required placeholder="HH">:
+  <input type="number" id="available_to_minute" name="available_to_minute" min="0" max="59" required placeholder="MM">
+  <select id="available_to_ampm" name="available_to_ampm" required>
+    <option value="AM">AM</option>
+    <option value="PM">PM</option>
+  </select>
+</div>
+    <button type="submit" name="sub">Register</button>
+  </form>
+</div>
+
+
+  <div class="form-container" id="patientForm">
+    <h2>Patient Form</h2>
+    <form action="patient_register.php" method="post">
+      <label for="pname">Patient Name</label>
+      <input type="text" id="pname" name="pname" required>
+
+      <label for="paddress">Patient Address</label>
+      <textarea id="paddress" name="paddress" rows="3" required></textarea>
+
+      <label for="pmobile">Mobile No</label>
+      <input type="tel" id="pmobile" name="pmobile" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile no" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="0" max="120" required>
+      <label for="password">Password (for Login)</label>
+    <input type="password" id="password" name="password" placeholder="Enter a password" required>
+      <button type="submit" name="sub">Submit</button>
+      
+    </form>
+  </div>
+
+  <div class="footer">
+    "get rid of waiting in long queue and enjoy the appointments from home"
+  </div>
+</body>
+</html>
